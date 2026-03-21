@@ -8,13 +8,13 @@ WalkThrough AI History is an interactive web application that lets you discover 
 
 ##  Features
 
-| Feature | Description |
-|---|---|
-|  **Interactive Map** | Navigate historical places with smooth, visually rich map-based exploration powered by Mapbox |
-|  **Landmark Discovery** | Browse and explore historical monuments, their significance, and nearby places |
-|  **AI-Powered Insights** | Get AI-generated historical context, descriptions, and interesting facts for every location |
-|  **Live Weather** | Real-time weather conditions for any selected location via OpenWeather API |
-|  **Fast & Responsive** | Optimized UI that works seamlessly across devices |
+
+
+ **Interactive Map** : Navigate historical places with smooth, visually rich map-based exploration powered by Mapbox |
+  **Landmark Discovery** : Browse and explore historical monuments, their significance, and nearby places |
+  **AI-Powered Insights** : Get AI-generated historical context, descriptions, and interesting facts for every location |
+  **Live Weather** : Real-time weather conditions for any selected location via OpenWeather API |
+  **Fast & Responsive** : Optimized UI that works seamlessly across devices |
 
 ---
 
@@ -74,8 +74,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ```
 walk-through-ai-history/
- app/
- explore/        # Monuments explorer page
+├── app/
+├── explore/        # Monuments explorer page
 │   ├── map/            # Interactive map page
 │   ├── ai-guide/       # AI guide feature
 │   └── layout.tsx      # Root layout
@@ -102,5 +102,8 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 3. Commit your changes (`git commit -m 'Add your feature'`)
 4. Push to the branch (`git push origin feature/your-feature`)
 5. Open a Pull Request
+
+---
+
 
 ---
