@@ -6,8 +6,7 @@ WalkThrough AI History is an interactive web application that lets you discover 
 
 ---
 ##  Features
-
-
+|---------|-------------|
 |  **Interactive Map** | Navigate historical places with smooth, visually rich map-based exploration powered by Mapbox |
 |  **Landmark Discovery** | Browse and explore historical monuments, their significance, and nearby places |
 |  **AI-Powered Insights** | Get AI-generated historical context, descriptions, and interesting facts for every location |
