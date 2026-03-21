@@ -5,16 +5,14 @@
 WalkThrough AI History is an interactive web application that lets you discover historical landmarks through an immersive map experience, AI-generated insights, and live weather data — making history more accessible and engaging than ever.
 
 ---
-
 ##  Features
 
 
-
-| **Interactive Map** :| Navigate historical places with smooth, visually rich map-based exploration powered by Mapbox |
- | **Landmark Discovery** :| Browse and explore historical monuments, their significance, and nearby places |
-  |**AI-Powered Insights** :| Get AI-generated historical context, descriptions, and interesting facts for every location |
-  |**Live Weather** :| Real-time weather conditions for any selected location via OpenWeather API |
-  |**Fast & Responsive** :| Optimized UI that works seamlessly across devices |
+|  **Interactive Map** | Navigate historical places with smooth, visually rich map-based exploration powered by Mapbox |
+|  **Landmark Discovery** | Browse and explore historical monuments, their significance, and nearby places |
+|  **AI-Powered Insights** | Get AI-generated historical context, descriptions, and interesting facts for every location |
+|  **Live Weather** | Real-time weather conditions for any selected location via OpenWeather API |
+|  **Fast & Responsive** | Optimized UI that works seamlessly across devices |
 
 ---
 
