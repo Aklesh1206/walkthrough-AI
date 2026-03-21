@@ -1825,12 +1825,11 @@
 
 // ─── API (calls our local backend server) ─────────────────────
 
+const BACKEND = 'https://walkthrough-ai-production.up.railway.app';
 fetch('/api/chat', ...)
 fetch('/api/planner', ...)
-const BACKEND = 'https://walkthrough-ai-production.up.railway.app';
-
 async function callChat(messages) {
-  const res = await fetch(`${BACKEND}/api/chat`, {
+ const res = await fetch('/api/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ messages })
@@ -1844,7 +1843,7 @@ async function callChat(messages) {
 }
 
 async function callPlanner(payload) {
-  const res = await fetch(`${BACKEND}/api/planner`, {
+  const res = await fetch('/api/planner', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
