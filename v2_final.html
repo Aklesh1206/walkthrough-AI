@@ -1824,7 +1824,7 @@
    ═══════════════════════════════════════════════════════════════ */
 
 // ─── API (calls our local backend server) ─────────────────────
-const BACKEND = 'walkthrough-ai-production.up.railway.app';
+const BACKEND = 'https://walkthrough-ai-production.up.railway.app';
 
 async function callChat(messages) {
   const res = await fetch(`${BACKEND}/api/chat`, {
