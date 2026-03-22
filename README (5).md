@@ -237,15 +237,7 @@ git checkout -b feature/your-feature
 git commit -m "feat: add your feature"
 git push origin feature/your-feature
 # Open a Pull Request
-```
-
----
-
-## 📄 License
-
-This project is [MIT](LICENSE) licensed.
-
----
+``'
 
 ## 🙏 Acknowledgements
 
