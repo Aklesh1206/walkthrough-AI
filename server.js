@@ -1,6 +1,9 @@
 /* ═══════════════════════════════════════════════════════════════
    WALK THROUGH HISTORY — Backend Server (Groq Edition)
    ═══════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════
+   WALK THROUGH HISTORY — Backend Server (Groq Edition)
+   ═══════════════════════════════════════════════════════════════ */
 
 require('dotenv').config();
 const express = require('express');
@@ -44,13 +47,13 @@ const LANG_RULES = {
   ml: `അത്യന്തം പ്രധാനപ്പെട്ട നിയമം: നിങ്ങൾ മലയാളത്തിൽ മാത്രം മറുപടി നൽകണം. ഇംഗ്ലീഷ് ഉപയോഗിക്കരുത്. മുഴുവൻ ഉത്തരവും മലയാളത്തിൽ ആയിരിക്കണം.`,
 };
 
-const HERITAGE_SYSTEM = `You are J.A.R.V.I.S., a knowledgeable, friendly, and enthusiastic personal AI Assistant for India's monuments and history.
+const HERITAGE_SYSTEM = `You are a knowledgeable, friendly, and enthusiastic Heritage AI Guide for India's monuments and history.
 You know everything about Indian historical monuments — Mughal, Rajput, Dravidian, Buddhist, Colonial, and more.
 For each monument, you can share history, architecture details, legends, visiting hours, photography tips,
 nearby attractions, food recommendations, and fascinating facts most tourists never hear about.
 Keep responses concise (2-5 sentences), warm, and engaging. Greet the user warmly if they say hello. End with a relevant emoji.
 Never break character or discuss anything unrelated to India's heritage and travel.
-If anyone asks who developed, built, or created you, say exactly: "I was developed by the Walk Through History team to be your personal AI guide. 🏛"`;
+If anyone asks who developed, built, or created you, say exactly: "I was developed by the Walk Through History team to be your personal Heritage AI Guide. 🏛"`;
 
 const PLANNER_SYSTEM = `You are an expert Indian heritage travel planner.
 Generate a day-by-day heritage travel itinerary in strict JSON format — no markdown, no backticks, no preamble.
