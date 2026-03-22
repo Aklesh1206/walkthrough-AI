@@ -1,9 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
    WALK THROUGH HISTORY — Backend Server (Groq Edition)
    ═══════════════════════════════════════════════════════════════ */
-/* ═══════════════════════════════════════════════════════════════
-   WALK THROUGH HISTORY — Backend Server (Groq Edition)
-   ═══════════════════════════════════════════════════════════════ */
 
 require('dotenv').config();
 const express = require('express');
@@ -181,6 +178,35 @@ app.post('/api/planner', async (req, res) => {
 // ─── HEALTH CHECK ─────────────────────────────────────────────
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', model: MODEL, timestamp: new Date().toISOString() });
+});
+
+// ─── TTS PROXY (bypasses CORS for Google Translate TTS) ───────
+app.get('/api/tts', async (req, res) => {
+  try {
+    const { text, lang } = req.query;
+    if (!text || !lang) return res.status(400).json({ error: 'Missing text or lang' });
+
+    const encoded = encodeURIComponent(text.slice(0, 200));
+    const url = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encoded}&tl=${lang}&client=tw-ob`;
+
+    const response = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Referer': 'https://translate.google.com/',
+      }
+    });
+
+    if (!response.ok) throw new Error('Google TTS failed');
+
+    const buffer = await response.arrayBuffer();
+    res.set('Content-Type', 'audio/mpeg');
+    res.set('Cache-Control', 'no-cache');
+    res.send(Buffer.from(buffer));
+
+  } catch (err) {
+    console.error('[/api/tts]', err.message);
+    res.status(500).json({ error: 'TTS unavailable' });
+  }
 });
 
 // ─── START ────────────────────────────────────────────────────
